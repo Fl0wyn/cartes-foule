@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carte de Foule</title>
     <link rel="stylesheet" href="https://public.feranet.fr/pub/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://public.feranet.fr/pub/fontawesome/css/all.min.css">
     <style type="text/css">
         body {
             color: var(--dark);
@@ -18,7 +17,6 @@
             color: #CB546B;
         }
 
-
         a {
             color: #009d9d;
         }
@@ -27,85 +25,26 @@
             color: #009d9d;
             text-decoration: underline;
         }
-
-        .nav-link {
-            color: var(--light);
-        }
-
-        .nav-link:hover {
-            text-decoration: none;
-            color: #009d9d;
-        }
-
-        /* Scroll */
-        ._ScrollTopBtn {
-            z-index: 2;
-            position: fixed;
-            right: 20px;
-            font-size: 40px;
-            color: var(--dark);
-        }
-
-        ._ScrollTopBtn {
-            display: none;
-            bottom: 20px;
-        }
-
-        ._ScrollTopBtn:hover {
-            color: #6C757D;
-            cursor: pointer;
-        }
     </style>
 </head>
 
 <body>
 
-    <div class="_ScrollTopBtn fas fa-arrow-circle-up"></div>
-
-    <nav class="navbar navbar-expand-sm bg-dark">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#mario">Mario</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#minion">Minion</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#bulles">Bulles</a>
-            </li>
-            <!--    <li class="nav-item">
-                <a class="nav-link" href="#invader">Invader</a>
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link" href="#conscrit">Conscrit</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#stick-world">Stick World</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#mini-rally">Mini Rally</a>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="container text-center">
+    <div class="container-fluid text-center">
 
         <h1 class="mt-5"><b>Carte de Foule</b></h1>
 
         <!-- Mario -->
         <div class="row justify-content-center text-center mt-5">
-            <div class="col">
+            <div class="col-sm-12 col-lg-6">
                 <h3 class="title" id="mario">Mario</h3>
                 <img src="images/mario.png" class="shadow rounded mb-2 img-fluid" alt="Mario">
                 <br />
                 <a class="download mt-3" href="cartes/Mario.txt" download>Télécharger</a>
                 <hr>
             </div>
-        </div>
-
-        <!-- Minion -->
-        <div class="row justify-content-center text-center mt-5">
-            <div class="col">
+            <!-- Minion -->
+            <div class="col-sm-12 col-lg-6">
                 <h3 class="title" id="minion">Minion</h3>
                 <img src="images/minion.png" class="shadow rounded mb-2 img-fluid" alt="Minion">
                 <br />
@@ -116,29 +55,15 @@
 
         <!-- Bulles -->
         <div class="row justify-content-center text-center mt-5">
-            <div class="col">
+            <div class="col-sm-12 col-lg-6">
                 <h3 class="title" id="bulles">Bulles</h3>
                 <img src="images/bulles.png" class="shadow rounded mb-2 img-fluid" alt="Bulles">
                 <br />
                 <a class="download mt-3" href="cartes/Bulles.txt" download>Télécharger</a>
                 <hr>
             </div>
-        </div>
-
-        <!-- Invader -->
-<!--         <div class="row justify-content-center text-center mt-5">
-            <div class="col">
-                <h3 class="title" id="invader">Invader</h3>
-                <img src="images/invader.png" class="shadow rounded mb-2 img-fluid" alt="Invader">
-                <br />
-                <a class="download mt-3" href="cartes/Invader.txt" download>Télécharger</a>
-                <hr>
-            </div>
-        </div> -->
-
-        <!-- Conscrit -->
-        <div class="row justify-content-center text-center mt-5">
-            <div class="col">
+            <!-- Conscrit -->
+            <div class="col-sm-12 col-lg-6">
                 <h3 class="title" id="conscrit">Conscrit</h3>
                 <img src="images/conscrit.png" class="shadow rounded mb-2 img-fluid" alt="Conscrit">
                 <br />
@@ -149,51 +74,25 @@
 
         <!-- Stick World -->
         <div class="row justify-content-center text-center mt-5">
-            <div class="col">
+            <div class="col-sm-12 col-lg-6">
                 <h3 class="title" id="stick-world">Stick World</h3>
                 <img src="images/stick-world.png" class="shadow rounded mb-2 img-fluid" alt="Stick World">
                 <br />
                 <a class="download mt-3" href="cartes/Stick Workd.txt" download>Télécharger</a>
                 <hr>
             </div>
-        </div>
-
-        <!-- Mini Rally -->
-        <div class="row justify-content-center text-center mb-5 mt-5">
-            <div class="col">
+            <!-- Mini Rally -->
+            <div class="col-sm-12 col-lg-6">
                 <h3 class="title" id="mini-rally">Mini Rally</h3>
                 <img src="images/mini-rally.png" class="shadow rounded mb-2 img-fluid" alt="Mini Rally">
                 <br />
                 <a class="download mt-3" href="cartes/Mini Rally.txt" download>Télécharger</a>
                 <hr>
             </div>
+
         </div>
 
     </div>
-
-    <script defer src="https://public.feranet.fr/pub/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://public.feranet.fr/pub/jquery/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-
-            var $scrollTop = $("._ScrollTopBtn");
-            var $scrollTopVal = "400";
-
-            $(window).scroll(function () {
-                if ($(this).scrollTop() > $scrollTopVal) {
-                    $scrollTop.fadeIn();
-                } else {
-                    $scrollTop.fadeOut();
-                }
-            });
-
-            $scrollTop.click(function () {
-                $("html, body").animate({
-                    scrollTop: 0
-                }, "slow");
-            });
-        });
-    </script>
 
 </body>
 
