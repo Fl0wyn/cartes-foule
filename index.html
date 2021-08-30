@@ -44,26 +44,19 @@
                             sm="12" :lg="radios">
                             <v-hover v-slot="{ hover }">
                                 <v-card :elevation="hover ? 12 : 2" :class="{ 'on-hover': hover }" download
-                                    :href="item.href">
+                                    :href="'maps/' + item.title + '.txt'">
 
-                                    <v-img :src="item.img" class="grey lighten-2"></v-img>
+                                    <v-img :src="'images/' + item.title + '.png'" class="grey lighten-2"></v-img>
 
                                     <v-toolbar flat>
                                         <v-toolbar-title>{{ item.title.replace('-',' ') }}</v-toolbar-title>
-
-                                        <v-icon color="success" class="ml-1" v-if="item.status">
-                                            mdi-check-circle : </v-icon>
-
-                                        <v-icon color="error" class="ml-1" v-else>
-                                            mdi-close-circle </v-icon>
 
                                         <v-icon v-show="hover ? true : false" class="ml-1">mdi-download</v-icon>
 
                                         <v-spacer></v-spacer>
 
-                                        <v-rating color="dark" length="3" :value="item.level" background-color="dark"
-                                            readonly>
-                                        </v-rating>
+                                        <v-chip outlined v-text="item.level"></v-chip>
+
                                     </v-toolbar>
                                 </v-card>
                             </v-hover>
@@ -71,39 +64,6 @@
                     </v-row>
                 </v-container>
             </v-main>
-
-            <v-footer padless>
-                <v-col class="text-center" cols="12">
-
-                    <v-chip outlined label>
-                        <v-icon color="grey darken-2" small class="mr-1">mdi-star</v-icon> Facile
-                    </v-chip>
-
-                    <v-chip outlined label>
-                        <v-icon color="grey darken-2" small class="mr-1">mdi-star</v-icon>
-                        <v-icon color="grey darken-2" small class="mr-1">mdi-star</v-icon> Moyen
-                    </v-chip>
-
-                    <v-chip outlined label>
-                        <v-icon color="grey darken-2" small class="mr-1">mdi-star</v-icon>
-                        <v-icon color="grey darken-2" small class="mr-1">mdi-star</v-icon>
-                        <v-icon color="grey darken-2" small class="mr-1">mdi-star</v-icon> Difficile
-                    </v-chip>
-
-                    <v-divider vertical class="mx-4"></v-divider>
-
-                    <v-chip outlined label>
-                        <v-icon small color="success" class="mr-1">
-                            mdi-check-circle : </v-icon> Carte terminée
-                    </v-chip>
-
-                    <v-chip outlined label>
-                        <v-icon small color="error" class="mr-1">
-                            mdi-close-circle </v-icon> Carte non terminée
-                    </v-chip>
-
-                </v-col>
-            </v-footer>
 
         </v-app>
     </div>
@@ -121,59 +81,35 @@
                 extinction: [
                     {
                         title: "Mario",
-                        href: "maps/Mario.txt",
-                        img: "images/Mario.png",
-                        level: 2,
-                        status: true,
+                        level: "Moyen"
                     },
                     {
                         title: "Minion",
-                        href: "maps/Minion.txt",
-                        img: "images/Minion.png",
-                        level: 2,
-                        status: true,
+                        level: "Moyen"
                     },
                     {
                         title: "Bulles",
-                        href: "maps/Bulles.txt",
-                        img: "images/Bulles.png",
-                        level: 2,
-                        status: true,
+                        level: "Moyen"
                     },
                     {
                         title: "Invader",
-                        href: "maps/Invader.txt",
-                        img: "images/Invader.png",
-                        level: 3,
-                        status: true,
+                        level: "Dificile"
                     },
                     {
                         title: "Conscrit",
-                        href: "maps/Conscrit.txt",
-                        img: "images/Conscrit.png",
-                        level: 1,
-                        status: true,
+                        level: "Facile"
                     },
                     {
                         title: "Mini-Rally",
-                        href: "maps/Mini-Rally.txt",
-                        img: "images/Mini-Rally.png",
-                        level: 2,
-                        status: true,
+                        level: "Moyen"
                     },
                     {
                         title: "Vieux-Chêne",
-                        href: "maps/Vieux-Chene.txt",
-                        img: "assets/empty.png",
-                        level: 3,
-                        status: false,
+                        level: "Dificile"
                     },
                     {
                         title: "Stick-World",
-                        href: "maps/Stick-World.txt",
-                        img: "images/Stick-World.png",
-                        level: 2,
-                        status: true,
+                        level: "Moyen"
                     },
                 ],
             }),
